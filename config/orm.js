@@ -141,7 +141,8 @@ var orm = {
   },
   delete: function(table, condition, cb) {
     console.log("delete called")
-    var queryString = "DELETE FROM " + connection.database === "burger_db" ? "burgers" : table;
+    var queryString = "DELETE FROM  burgers" ;
+    //queryString += connection.database === "burger_db" ? "burgers" : table;
     queryString += " WHERE ";
     queryString += condition;
     if(queryString.indexOf("sleepy")>0){
